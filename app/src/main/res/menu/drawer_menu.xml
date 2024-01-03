@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/myDots"
+        android:icon="@drawable/add_dots"
+        android:title="@string/mydots" />
+    <item
+        android:id="@+id/getDots"
+        android:icon="@drawable/qr_code_2"
+        android:title="الحصول علي نقاط" />
+    <item
+        android:id="@+id/Products"
+        android:icon="@drawable/paint_bunckt_2"
+        android:title="المنتجات" />
+    <item
+        android:id="@+id/presents"
+        android:icon="@drawable/gift_2"
+        android:title="لاستبدال الهدايا" />
+    <item
+        android:id="@+id/sale"
+        android:icon="@drawable/sale_tag"
+        android:iconTint="@color/white"
+        android:title="العروض" />
+    <item
+        android:id="@+id/outApp"
+        android:icon="@drawable/ic_baseline_share_24"
+
+        android:title="مشاركة" />
+    <item
+        android:id="@+id/logOut"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:title="تسجيل الخروج" />
+</menu>

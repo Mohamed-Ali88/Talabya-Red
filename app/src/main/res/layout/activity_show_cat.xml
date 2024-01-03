@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/no_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/colorAccent"
+        android:text="لا يوجد اي اقسام"
+        android:fontFamily="@font/tajawal_bold"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:orientation="vertical">
+        <include layout="@layout/categories_placeholder" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/showCatLy"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35ssp"
+            android:background="@color/white"
+            android:elevation="15dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/backCat"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:rotationY="180"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/page_title_cats"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/tajawal_bold"
+                android:gravity="right|center_vertical"
+                android:text="المنتجات"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_16sdp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ly"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvPromotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cats"
+            android:layout_alignEnd="@+id/cats"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="@font/tajawal_bold"
+            android:padding="@dimen/_12ssp"
+            android:text="الاكثر مبيعا"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/promotion_cats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPromotion"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layoutDirection="rtl"
+            android:scrollbarTrackHorizontal="@color/colorAccent"
+            android:scrollbars="vertical" />
+
+
+    </LinearLayout>
+</RelativeLayout>

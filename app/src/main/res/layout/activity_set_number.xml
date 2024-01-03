@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context=".Activities.setNumber">
+
+    <LinearLayout
+        android:id="@+id/fads"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40ssp"
+        android:background="@color/white"
+        android:elevation="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_product_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center|center_vertical"
+            android:text="تسجيل برقم المحمول"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_16sdp" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:rotationY="180"
+            android:src="@drawable/back" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:fontFamily="@font/tajawal_bold"
+        android:padding="@dimen/_10sdp"
+        android:text="رقم الهاتف"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+    <EditText
+        android:id="@+id/set_new_number"
+        android:layout_width="match_parent"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:letterSpacing="0.2"
+        android:fontFamily="@font/tajawal_bold"
+        android:backgroundTint="@color/material_grey_300"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/start_signUp_btn"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:visibility="gone"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/tajawal_bold"
+        android:text="إنشاء"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        card_view:cornerRadius="@dimen/_8sdp"
+        card_view:layout_constraintTop_toBottomOf="@+id/set_new_number" />
+    <Button
+        android:id="@+id/faceBtn"
+        android:clickable="false"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/colorDivider"
+        android:visibility="visible"
+        android:fontFamily="@font/tajawal_bold"
+        android:text="إنشاء"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        card_view:cornerRadius="@dimen/_8sdp"
+        card_view:layout_constraintTop_toBottomOf="@+id/set_new_number" />
+
+</LinearLayout>

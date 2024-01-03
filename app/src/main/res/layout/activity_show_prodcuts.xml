@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/no_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/colorAccent"
+        android:text="لا يوجد اي منتجات"
+        android:fontFamily="@font/tajawal_bold"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:orientation="vertical">
+        <include layout="@layout/products_placeholder" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ly"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:id="@+id/fads"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35ssp"
+        android:elevation="15dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:id="@+id/back"
+            android:layout_height="match_parent"
+            android:rotationY="180"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_product_page"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="right|center_vertical"
+            android:text="المنتجات"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_16sdp" />
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/products"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fads"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp" />
+    </LinearLayout>
+
+</RelativeLayout>

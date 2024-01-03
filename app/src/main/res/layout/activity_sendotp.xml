@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".Activities.SendOTPActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/send" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/bungee"
+                android:text="OTP Verification"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/_16ssp" />
+
+
+            <TextView
+                android:id="@+id/signupText"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:gravity="center"
+                android:text="سيرسل رمز التحقق الي رقمك ،تأكد من صحة رقمك."
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:gravity="center"
+                android:text="ادخل رقم الموبايل"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/theNumber"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/round_back_blue_10_10"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:hint="00000000000"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="11"
+                android:textColor="#000000"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blueLight"
+                    android:text="get OTP"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    card_view:cornerRadius="20sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.registerActivity">
+
+    <ProgressBar
+        android:id="@+id/Pb"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:indeterminateTint="@color/colorAccent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/fads"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40ssp"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:elevation="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:rotationY="180"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_product_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/tajawal_bold"
+            android:gravity="center|center_vertical"
+            android:text="انشاء حساب جديد"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_16sdp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fads">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="اسم العميل"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <EditText
+                android:id="@+id/custName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:padding="@dimen/_5sdp"
+                android:text="يجب ادخال اسم العميل"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="اسم العميل يجب ان يتكون من 4 حروف ع الاقل"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="اسم المحل"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <EditText
+                android:id="@+id/shopName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:clickable="false"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:padding="@dimen/_5sdp"
+                android:text="يجب ادخال اسم المحل"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="اسم المحل يجب ان يتكون من 4 حروف ع الاقل"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="الرقم السري"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:clickable="false"
+                android:inputType="number"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:padding="@dimen/_5sdp"
+                android:text="يجب ادخال الرقم الرقم السري"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="الرقم السري يجب ان لا يقل عن 6 ارقام"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="العنوان"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <EditText
+                android:id="@+id/custAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:clickable="false"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:padding="@dimen/_5sdp"
+                android:text="يجب ادخال العنوان"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="العنوان يجب ان يتكون من 4 حروف ع الاقل"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="المحافظة"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+
+            <Spinner
+                android:id="@+id/custGover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:drawableStart="@drawable/ccp_ic_arrow_drop_down"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp" />
+
+            <View
+                android:id="@+id/govLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="المنطقة الرئسية"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <Spinner
+                android:id="@+id/custCity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/tajawal_bold"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp" />
+
+            <View
+                android:id="@+id/cityLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="المنطقة الفرعية"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <EditText
+                android:id="@+id/area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:padding="@dimen/_5sdp"
+                android:text="يجب ادخال اسم المنظقة"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tajawal_light"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="اسم المنظقة يجب ان يتكون من 4 حروف ع الاقل"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="نوع النشاط"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fads" />
+
+            <Spinner
+                android:id="@+id/shopType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/tajawal_bold"
+                android:letterSpacing="0.2"
+                android:textColor="@color/button_material_dark"
+                android:textCursorDrawable="@drawable/color_crusor_2"
+                android:textSize="@dimen/_10sdp" />
+
+            <View
+                android:id="@+id/spinnerLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/black" />
+
+            <Button
+                android:id="@+id/sendAccountDate"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/tajawal_bold"
+                android:text="انشاء الحساب"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                card_view:cornerRadius="@dimen/_50sdp" />
+
+            <View
+                android:id="@+id/typeLine"
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
